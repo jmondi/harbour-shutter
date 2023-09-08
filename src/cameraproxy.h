@@ -85,7 +85,6 @@ public:
     Q_INVOKABLE void removeControlValue(CameraProxy::Control c);
 
 public Q_SLOTS:
-    void renderComplete(libcamera::FrameBuffer *buffer);
     void setViewFinder(ViewFinder2D *vf);
     void setCameraIndex(QString idx);
     void startViewFinder();
@@ -143,7 +142,6 @@ private:
 
     void processCapture();
     void processViewfinder(libcamera::FrameBuffer *buffer);
-    void processStill(libcamera::FrameBuffer *buffer);
 
     void requestComplete(libcamera::Request *request);
     void cacheFormats(libcamera::StreamRole role);
